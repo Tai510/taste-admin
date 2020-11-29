@@ -37,14 +37,16 @@ const Messages = () => {
 
   return (
     <div className='Message-Box'>
-        <h1>Message Box</h1>
+        <h1>Customer Message</h1>
         <p>{
           messages && messages.map( info => {
               return (
                   <div className='Box'>
-                      <li> <label>Name: {info.name}</label></li>
-                      <li><label>Email: {info.email}</label></li>
-                      <li><label>Message: {info.message}</label></li>
+                    <div className='name-email-div'>
+                      <li id='name'><label>Name: {info.name}</label></li>
+                      <li id='email'><label>Email: {info.email}</label></li>
+                    </div>
+                      <li id='message'><label>Message: {info.message}</label></li>
                       <button onClick={onDelete}>Delete Message</button>
                   </div>
               )
