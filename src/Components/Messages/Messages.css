@@ -1,0 +1,16 @@
+.Message-Box {
+    text-align: center;
+}
+
+.Box {
+    border: 1px solid black;
+    height: 140px;
+    width: 330px;
+    list-style: none;
+    text-align: center;
+}
+
+.Box li {
+    padding: 5px;
+    margin-top: 10px;
+}
