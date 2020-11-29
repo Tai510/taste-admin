@@ -8,6 +8,7 @@ const Messages = () => {
 
   useEffect(() => {
     getMessage();
+    onDelete()
   }, []);
 
   const getMessage = () => {
@@ -19,12 +20,17 @@ const Messages = () => {
         snapshot.forEach((doc) => {
           const data = doc.data();
           message.push(data);
+          
         });
         setMessages(message);
         console.log("Messages :", messages);
       })
       .catch((error) => console.log(error));
   };
+
+  const onDelete = () => {
+    db.collection('messages').doc(messages.id).delete()
+  }
 
   
   
@@ -39,6 +45,7 @@ const Messages = () => {
                       <li> <label>Name: {info.name}</label></li>
                       <li><label>Email: {info.email}</label></li>
                       <li><label>Message: {info.message}</label></li>
+                      <button onClick={onDelete}>Delete Message</button>
                   </div>
               )
           })
