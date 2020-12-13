@@ -1,48 +1,14 @@
-.Message-Box {
-    margin: 0 150px;
-}
-
-.Message-Box h1 {
-    text-align: center;
-}
-
 .Box {
-    height: 70px;
-    width: 100%;
-    list-style: none;
-    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.Box li {
-    padding: 5px;
-    margin-top: 10px;
-    border: 1px solid black;
+.Box Button {
+    margin-left: 15px !important;
+    margin-bottom: 15px;
 }
 
-.name-email-div {
-    width: 360px;
-}
-
-.name-email-div li {
-    height: 21px;
-    padding-top: 8px;
-    margin: 0;
-}
-
-#name {
-    background: #ff6464;
-}
-
-#email {
-    background: #a5a5da;    
-}
-
-#message {
-    border: 1px solid black;
-    height: 60px;
-    width: 945px;
-    margin-top: 0 !important;
-    background: #84c784;
+.message-list {
+    border: 1px solid rgb(141, 136, 136) !important;
+    width: 100%;
 }
