@@ -3,6 +3,14 @@
     justify-content: space-between;
 }
 
+.Message-Box h1 {
+    text-align: center;
+}
+
+.noti {
+    text-align: center;
+}
+
 .Box Button {
     margin-left: 15px !important;
     margin-bottom: 15px;

@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
-import MessageList from "../../MessageList";
-import './Messages.css'
+import MessageList from "../Messages/MessageList";
+import "./Messages.css";
 
 const Messages = (props) => {
   const [messages, setMessages] = useState([{}]);
-  const [box, setBox] = useState([]);
 
   useEffect(() => {
-    getMessage()
+    getMessage();
   }, []);
 
   const getMessage = () => {
-    db.collection("messages")
-    .onSnapshot((snapshot) => {
+    db.collection("messages").onSnapshot((snapshot) => {
       setMessages(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -22,7 +20,7 @@ const Messages = (props) => {
           message: doc.data().message,
         }))
       );
-    })
+    });
   };
 
   return (
