@@ -7,10 +7,16 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 
 const MessageItem = (props) => {
+
   const removeItem = (e) => {
     e.preventDefault();
-    db.collection("messages").doc(props.id).delete();
+    let deleteMsg = ('Are you sure you want to delete this message?');
+    let result = window.confirm(deleteMsg);
+    if(result == true) {
+      db.collection("messages").doc(props.id).delete();
+    }
   };
+
   return (
     <div className="Box">
       <div className="message-list">
